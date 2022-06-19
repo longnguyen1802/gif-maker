@@ -4,7 +4,7 @@ const {
     v4: uuidv4
 } = require('uuid');
 
-var dir = './uploads';
+var dir = './upload/input';
 var storage = multer.diskStorage({
     destination: function(req, file, callback) {
         callback(null, dir);

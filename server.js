@@ -23,15 +23,14 @@ app.post('/download', async(req, res, next) => {
     //console.log(req.body.namfile);
     const filename = "new.gif";
     const filePath = req.body.namfile;
-    res.download('public/'+filePath, filename, (err) => {
+    res.download('public/' + filePath, filename, (err) => {
         if (err) {
             res.status(500).send({
                 message: "Could not download the file. " + err,
             });
-        }
-        else{
-            
+        } else {
+            res.render('index.ejs');
         }
     });
 })
-app.listen(4000);
+app.listen(4600);
