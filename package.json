@@ -8,7 +8,7 @@
     "dev": "next dev",
     "build": "npm install && node server.js",
     "delete-create": "rm -rf node_modules/canvas/build/Release/ && mkdir node_modules/canvas/build/Release",
-    "vercel-build": "npm run delete-create && yum install libuuid-devel libmount-devel zlib && cp /lib64/{libuuid,libmount,libblkid,libz}.so.1 node_modules/canvas/build/Release/ && node server.js",
+    "vercel-build": "npm install && npm run delete-create && yum install libuuid-devel libmount-devel zlib && cp /lib64/{libuuid,libmount,libblkid,libz}.so.1 node_modules/canvas/build/Release/ && node server.js",
     "start": "node server.js",
     "deploy": "now"
   },
