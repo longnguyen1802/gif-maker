@@ -10,9 +10,9 @@ var filename = './output/intermediate-octree.gif';
 
 function formGif(req, res) {
     upload(req, res, async function(err) {
-        if (err) {
-            return res.send("Something wrong");
-        }
+        // if (err) {
+        //     return res.send("Something wrong");
+        // }
         //console.log("Start");
         createGif('octree', dir).then(() => {
             res.render('gif_preview', {
