@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #hello{
+                display: none;
+            }
+            #haha{
+                display: none;
+            }
+        </style>
+        <body>
+            <div>
+                <div id="loading">
+                    <img id="loading-image" src= <%= filename %> alt="Loading.." />
+                </div>
+                <form action="/download" method="POST">
+                    <label id = "haha" for="minlat"></label>
+                    <input type="text" id="hello" name="namfile" value= <%= filename %> ><br>
+                    <button>Submit</button>
+                  </form>
+            </div>
+        </body>
+    </head>
+</html>
